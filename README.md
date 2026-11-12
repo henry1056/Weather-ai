@@ -49,7 +49,15 @@ pip install pandas numpy requests scikit-learn xgboost
 
 ## Usage
 
-### Run the Full Pipeline
+### 1. Launch the Interactive Web GUI (Streamlit)
+
+You can launch the web application to interactively select cities, train models, inspect feature importance, and visualize forecasts:
+
+```bash
+streamlit run app.py
+```
+
+### 2. Run the Full CLI Pipeline
 
 Execute `weather_pipeline.py` to download historical data (defaults to New York City, `40.7128° N, -74.0060° W`), train the model, print evaluation metrics, and output a next-day forecast:
 
