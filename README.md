@@ -49,15 +49,29 @@ pip install pandas numpy requests scikit-learn xgboost
 
 ## Usage
 
-### 1. Launch the Interactive Web GUI (Streamlit)
+### 1. Windows One-Click Quick Start (`run.bat` / `ran.bat`)
 
-You can launch the web application to interactively select cities, train models, inspect feature importance, and visualize forecasts:
+On Windows, simply double-click **`run.bat`** (or **`ran.bat`**) or run it in Command Prompt:
+
+```cmd
+run.bat
+```
+
+This script will automatically:
+- Verify your Python installation.
+- Create a local virtual environment (`.venv`) if one doesn't exist.
+- Install or update all required packages from `requirements.txt`.
+- Launch the Streamlit Web GUI in your browser.
+
+### 2. Launch the Interactive Web GUI (Streamlit)
+
+You can also launch the web application directly via terminal:
 
 ```bash
 streamlit run app.py
 ```
 
-### 2. Run the Full CLI Pipeline
+### 3. Run the Full CLI Pipeline
 
 Execute `weather_pipeline.py` to download historical data (defaults to New York City, `40.7128° N, -74.0060° W`), train the model, print evaluation metrics, and output a next-day forecast:
 
@@ -99,8 +113,11 @@ print(forecast)
 
 ```text
 Weather-ai/
+├── app.py                # Interactive Streamlit Web GUI & Visual Dashboard
 ├── weather_pipeline.py   # End-to-end data fetching, feature engineering, training & inference
 ├── requirements.txt      # Python package dependencies
+├── run.bat               # Windows one-click launcher (sets up venv, installs packages, runs GUI)
+├── ran.bat               # Shortcut wrapper for run.bat
 ├── README.md             # Project documentation
 └── LICENSE               # License file
 ```
